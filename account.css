@@ -1,0 +1,70 @@
+/* account.css
+    Phiên bản đơn giản và có chú thích bằng tiếng Việt
+    Mục tiêu: dễ đọc cho sinh viên năm 2
+*/
+
+/* Khung chính của trang (giữ chiều rộng hợp lý) */
+.container {
+   max-width: 1200px; /* chiều rộng tối đa */
+   margin: 28px auto; /* căn giữa trang */
+   padding: 0 20px;    /* khoảng cách trái phải */
+}
+
+/* đường dẫn (breadcrumb) */
+.breadcrumb {
+   font-size: 14px;
+   color: #666;
+   margin-bottom: 18px;
+}
+
+/* lưới chứa 2 khung: đăng nhập & đăng ký */
+.account-grid {
+   display: flex;      /* đặt 2 khung cạnh nhau */
+   gap: 40px;          /* khoảng cách giữa 2 khung */
+   align-items: flex-start;
+}
+
+/* hộp chung dùng cho cả đăng nhập/đăng ký */
+.box {
+   border: 1px solid #ddd;
+   padding: 18px;
+   background: #fff;
+}
+
+/* phần biểu mẫu chiếm không gian linh hoạt */
+.box.form-box { flex: 1; }
+.box.form-box.left { max-width: 54%; }  /* hộp bên trái rộng hơn */
+.box.form-box.right { max-width: 40%; } /* hộp bên phải nhỏ hơn */
+
+.box h3 { margin: 0 0 12px; font-size: 18px; }
+
+/* nhãn và input */
+label { display: block; margin: 8px 0 6px; font-size: 14px; }
+input[type="text"], input[type="email"], input[type="password"] {
+   width: 100%;              /* chiếm toàn bộ chiều ngang khung */
+   padding: 10px;            /* khoảng đệm trong ô */
+   border: 1px solid #ccc;   /* viền nhẹ */
+   border-radius: 3px;       /* bo góc nhẹ */
+   background: #fafafa;      /* nền sáng */
+}
+
+/* hành động (nút, checkbox) */
+.form-actions { margin-top: 12px; display: flex; align-items: center; gap: 12px; }
+.btn {
+   display: inline-block;
+   padding: 10px 16px;
+   background: #111; /* màu nền chính */
+   color: #fff;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+}
+.btn.ghost { background: transparent; color: #111; border: 1px solid #bbb; }
+.small { font-size: 13px; color: #666; }
+.remember { display: inline-flex; align-items: center; gap: 6px; }
+
+/* Responsive: trên màn nhỏ, xếp 2 khung dọc thay vì ngang */
+@media (max-width: 880px) {
+   .account-grid { flex-direction: column; }
+   .box.form-box.left, .box.form-box.right { max-width: 100%; }
+}

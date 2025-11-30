@@ -1,0 +1,63 @@
+/*
+   hero.css
+   Các quy tắc cho hero slider (giải thích bằng tiếng Việt)
+
+   Giải thích ngắn:
+   - Ý tưởng: đặt tất cả slide trong một `.slides-track` (dạng hàng ngang)
+	 rồi di chuyển `.slides-track` bằng `transform: translateX()` để tạo hiệu ứng.
+   - Cách này đơn giản và mượt vì trình duyệt tối ưu hóa `transform`.
+*/
+
+/* Vỏ ngoài của slider - giữ khung hiển thị và che phần thừa */
+.hero {
+	position: relative; /* để đặt các chấm (dots) bằng position:absolute */
+	overflow: hidden;   /* ẩn phần ảnh nằm ngoài khung */
+}
+
+/* Khu vực hiển thị slide (viewport) */
+.hero-slides {
+	width: 100%;
+	height: 60vh;       /* 60% chiều cao trình duyệt */
+	min-height: 300px;  /* không để quá nhỏ */
+}
+
+/* Đường track chứa các slide liên tiếp nhau (flex row) */
+.slides-track {
+	display: flex;                     /* xếp slide theo hàng ngang */
+	transition: transform 0.6s ease;   /* animation mượt khi translate */
+	will-change: transform;            /* gợi ý cho trình duyệt tối ưu */
+}
+
+/* Mỗi slide chiếm toàn bộ khung hiển thị */
+.slide {
+	min-width: 100%;                    /* chiếm 100% chiều rộng viewport */
+	height: 100%;                       /* chiều cao bằng .hero-slides */
+	background-size: cover;             /* ảnh phủ hết vùng */
+	background-position: center;        /* căn giữa ảnh */
+	flex-shrink: 0;                     /* không co nhỏ */
+}
+
+/* Bộ chấm điều hướng dưới slider */
+.hero-dots {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%); /* căn giữa theo ngang */
+	bottom: 18px;
+	display: flex;
+	gap: 8px;
+}
+
+.hero-dots .dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgba(255,255,255,0.7);
+	border: 1px solid rgba(0,0,0,0.12);
+	cursor: pointer;
+}
+.hero-dots .dot.active { background: #6b4bd6; }
+
+/* Trên màn nhỏ, giảm chiều cao slider để phù hợp */
+@media (max-width: 720px) {
+	.hero-slides { height: 44vh; }
+}

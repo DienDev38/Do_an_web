@@ -1,0 +1,65 @@
+/* product.css
+   Styles cho trang chi tiết sản phẩm (giải thích tiếng Việt)
+
+   Bố cục chính:
+   - Dùng lưới 2 cột: cột ảnh (trái) và cột thông tin (phải)
+   - Ảnh lớn + thumbnails dọc ở bên trái
+   - Phần mô tả và mục liên quan ở dưới
+*/
+
+.product-page{ max-width:1200px; margin: 28px auto; padding: 0 20px; }
+.product-breadcrumb{ background:#fafafa; padding:12px 16px; margin-bottom:18px; font-size:14px; color:#666 }
+
+.product-grid{ display: grid; grid-template-columns: 100px 1fr 420px; gap: 24px; align-items:start; }
+
+/* Gallery: thumbnails dọc bên trái, ảnh lớn ở giữa */
+.gallery{ display:flex; gap:16px; align-items:flex-start }
+.thumbs{ width:100%; display:flex; flex-direction:column; gap:18px; align-items:center }
+.thumbs img{ width:72px; height:92px; object-fit:cover; cursor:pointer; border:2px solid transparent; box-sizing:border-box }
+.thumbs img.active{ border-color:#d32; }
+.main-image{ width:100%; display:flex; justify-content:center }
+.main-image img{ width:520px; display:block; border:1px solid #eee; object-fit:cover }
+
+.product-info{ padding: 6px 18px; border-left:1px solid #eee }
+.product-title{ font-size:22px; margin:0 0 8px }
+.product-price{ color:#d32; font-weight:700; font-size:22px; margin:6px 0 14px }
+.product-price:after{ content:''; display:block; height:1px; background:#eee; margin-top:14px }
+
+.product-variants{ display:flex; gap:12px; align-items:center; margin-bottom:18px }
+.colors img{ width:36px; height:36px; object-fit:cover; border:1px solid #eee; margin-left:8px }
+.sizes button{ padding:10px 14px; border:1px solid #ccc; background:#f3f3f3; cursor:pointer; margin-left:8px; border-radius:4px }
+.sizes button.active{ background:#111; color:#fff; border-color:#111 }
+
+.qty{ display:flex; gap:8px; align-items:center; margin-top:8px }
+.qty button{ width:36px; height:36px; border:1px solid #ccc; background:#fff; cursor:pointer }
+.qty input{ border:1px solid #ccc; padding:8px; width:64px; text-align:center }
+.add-cart{ display:inline-flex; align-items:center; justify-content:center; gap:10px; width:100%; background:#000; color:#fff; padding:16px 18px; border:none; cursor:pointer; margin-top:18px; font-weight:700; text-transform:uppercase }
+.add-cart svg{ filter: invert(1); }
+
+.product-tabs{ margin-top:28px; border-top:1px solid #eee; padding-top:18px }
+.product-tabs h3{ margin:0 0 10px }
+.product-tabs ul{ list-style: none; padding: 0; margin: 8px 0 18px; color:#222 }
+.product-tabs ul li{ margin: 8px 0; font-size: 15px }
+.product-tabs .size-guide{ margin-top:18px; font-weight:700; text-transform:uppercase }
+
+/* Make description look like screenshot: slightly larger heading and spaced lists */
+.product-tabs h3{ font-size:18px; font-weight:700 }
+
+.related-products{ margin-top:30px }
+.related-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap:28px }
+.related-card{ text-align:center }
+.related-card img{ width:100%; border:1px solid #eee }
+
+.newsletter-strip{ display:flex; gap:12px; align-items:center; background:#f5f5f5; padding:14px 20px; margin-top:22px }
+.newsletter-strip input[type="email"]{ flex:1; padding:10px; border:1px solid #ddd }
+.newsletter-strip button{ background:#000; color:#fff; padding:10px 14px; border:none; cursor:pointer }
+
+@media (max-width: 900px){
+  .product-grid{ grid-template-columns: 1fr; }
+  .thumbs{ flex-direction:row; width:auto }
+  .main-image img{ width:100%; max-width:720px }
+  .related-grid{ grid-template-columns: repeat(2, 1fr) }
+  .newsletter-strip{ flex-direction:column; align-items:stretch }
+  .product-info{ border-left:none; padding-left:0 }
+}
+
