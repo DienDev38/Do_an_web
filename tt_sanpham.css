@@ -45,6 +45,18 @@
 /* Make description look like screenshot: slightly larger heading and spaced lists */
 .product-tabs h3{ font-size:18px; font-weight:700 }
 
+/* Breadcrumb bar shown under main nav (nền xám, padding, đầy đủ chiều ngang) */
+.product-breadcrumb{
+  background:#f3f3f3;
+  padding:12px 18px;
+  margin:14px 0;
+  font-size:14px;
+  color:#222;
+  border-radius:2px;
+}
+.product-breadcrumb a{ color:inherit; text-decoration:none }
+.product-breadcrumb a:hover{ text-decoration:underline }
+
 .related-products{ margin-top:30px }
 .related-grid{ display:grid; grid-template-columns: repeat(4, 1fr); gap:28px }
 .related-card{ text-align:center }

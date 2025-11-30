@@ -24,6 +24,11 @@
 
 /* Header chính */
 .site-header{ background: #fff; border-bottom: 1px solid #f1f1f1; }
+.main-nav{
+  background: #fff;
+  /* thin full-width dividers above and below the nav */
+  box-shadow: inset 0 1px 0 #e9e9e9, inset 0 -1px 0 #e9e9e9;
+}
 .header-inner{
   max-width: 1200px; /* giới hạn chiều rộng */
   margin: 0 auto;    /* căn giữa */
@@ -32,7 +37,8 @@
   gap: 20px;         /* khoảng giữa phần tử */
   padding: 10px 20px;
 }
-.site-logo{ font-weight: 700; font-size: 20px; }
+.site-logo{ display:inline-block; }
+.site-logo img{ height:40px; width:auto; display:block }
 
 /* Ô tìm kiếm đặt ở giữa, sẽ co giãn bằng thuộc tính flex */
 .search-wrap{ flex: 1; display:flex; justify-content:center; }
@@ -53,7 +59,7 @@
 .icon-btn{ width:36px; height:36px; display:inline-flex; align-items:center; justify-content:center; border-radius:50%; background:transparent; border:none; cursor:pointer }
 
 /* Menu chính dưới header, căn giữa */
-.main-nav .nav-inner{ max-width:1200px; margin:0 auto; display:flex; justify-content:center; gap:36px; padding:16px 20px }
+.main-nav .nav-inner{ max-width:1200px; margin:0 auto; display:flex; justify-content:center; gap:36px; padding:10px 20px }
 .main-nav a{ color:#111; text-decoration:none; font-weight:500 }
 
 /* Responsive: điều chỉnh độ rộng ô tìm kiếm khi màn nhỏ */
