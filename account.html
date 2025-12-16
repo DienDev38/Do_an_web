@@ -81,11 +81,21 @@
     </div>
 
     <div class="newsletter-strip">
-      <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:12px;padding:8px 20px">
-        <div style="flex:1">Đăng Ký Nhận Tin</div>
-        <input style="flex:2;padding:10px;border:1px solid #ddd;background:#fff" placeholder="Nhập email của bạn" />
-        <button class="btn">Đăng Ký</button>
-        <div style="flex:1;text-align:right;color:#d32;">Hỗ trợ / Mua hàng: 097 328 58 86</div>
+      <div class="newsletter-container">
+        <div class="newsletter-content">
+          <div class="newsletter-text">
+            <h3 class="newsletter-title">Đăng Ký Nhận Tin</h3>
+            <p class="newsletter-desc">Nhận khuyến mãi và tin tức mới nhất từ chúng tôi</p>
+          </div>
+          <form class="newsletter-form" action="#" method="post">
+            <input type="email" class="newsletter-input" placeholder="Nhập email của bạn" required />
+            <button type="submit" class="btn newsletter-btn">Đăng Ký</button>
+          </form>
+        </div>
+        <div class="newsletter-contact">
+          <span class="contact-label">Hỗ trợ / Mua hàng</span>
+          <span class="contact-phone">097 328 58 86</span>
+        </div>
       </div>
     </div>
 
