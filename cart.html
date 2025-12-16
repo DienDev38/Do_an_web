@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ Hàng</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="cart-page.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-container">
+      <div class="logo">FASHION STORE</div>
+      <nav class="nav">
+        <a href="index.html">Trang chủ</a>
+        <a href="khuyen_mai.html">Khuyến mãi</a>
+        <a href="account.html">Tài khoản</a>
+        <a href="cart.html" class="cart-link">
+          <span class="cart-icon">🛒</span>
+          <span class="cart-count" style="display:none;">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cart-page">
+    <div class="container">
+      <h1>Giỏ Hàng Của Bạn</h1>
+      
+      <div class="cart-content">
+        <div class="cart-items-section">
+          <div id="cart-items" class="cart-list">
+            <!-- Items rendered here -->
+          </div>
+        </div>
+
+        <div class="cart-summary">
+          <div class="summary-box">
+            <h3>Tổng Cộng</h3>
+            <div class="summary-row">
+              <span>Subtotal:</span>
+              <span id="cart-total">0đ</span>
+            </div>
+            <div class="summary-row">
+              <span>Shipping:</span>
+              <span>Miễn phí</span>
+            </div>
+            <div class="summary-row total-row">
+              <span>Total:</span>
+              <span id="cart-grand-total">0đ</span>
+            </div>
+            <button id="checkout-btn" class="btn-checkout">Thanh toán</button>
+            <a href="khuyen_mai.html" class="btn-continue">← Tiếp tục mua sắm</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-content">
+      <p>&copy; 2025 Fashion Store. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="cart.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+      // sync grand total
+      const updateGrandTotal = ()=>{
+        const total = cart.total();
+        const gt = document.getElementById('cart-grand-total');
+        if(gt) gt.textContent = formatVnd(total);
+      };
+      
+      function formatVnd(num){ 
+        const n = parseInt(num||0,10); 
+        if(isNaN(n)) return num; 
+        return n.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.') + 'đ'; 
+      }
+
+      // render cart and sync totals
+      cart.renderCart();
+      updateGrandTotal();
+
+      // re-render when items change (intercept renderCart)
+      const origRender = cart.renderCart;
+      cart.renderCart = function(){
+        origRender();
+        updateGrandTotal();
+      };
+
+      // checkout handler
+      const checkoutBtn = document.getElementById('checkout-btn');
+      if(checkoutBtn){
+        checkoutBtn.addEventListener('click', ()=>{
+          const total = cart.total();
+          if(total <= 0){
+            alert('Giỏ hàng trống. Vui lòng thêm sản phẩm.');
+            return;
+          }
+          if(confirm(`Xác nhận thanh toán ${formatVnd(total)}?`)){
+            alert('Cảm ơn bạn! Đơn hàng của bạn đã được tiếp nhận. Mã đơn hàng: #' + Math.floor(Math.random()*100000));
+            cart.clear();
+            window.location.href = 'index.html';
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
