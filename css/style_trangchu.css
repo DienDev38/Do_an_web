@@ -1,4 +1,3 @@
-/* Styles specific to the homepage footer and promotional areas */
 .footer-top{background:#fff;padding:48px 0;border-top:1px solid #eee}
 .footer-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr 1fr 300px;gap:32px;padding:0 20px}
 .footer-col h4{font-size:16px;margin:0 0 12px;letter-spacing:.4px}
@@ -17,5 +16,4 @@
   .footer-grid{grid-template-columns:1fr}
 }
 
-/* Small helper styles used on homepage */
 .footer-col h4.title{font-weight:700}

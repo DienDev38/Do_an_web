@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>360 Boutique - Chi tiết sản phẩm</title>
-  <link rel="stylesheet" href="header.css" />
-  <link rel="stylesheet" href="tt_sanpham.css" />
-  <link rel="stylesheet" href="footer.css" />
+  <title> Chi tiết sản phẩm</title>
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/tt_sanpham.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
   <div class="topbar">
     <div class="inner">Hotline Mua Hàng: 0973 285 886 | Email: 360boutique.vn@gmail.com</div>
   </div>
-  <!-- Header (dùng lại header.css) -->
   <header class="site-header">
     <div class="header-inner">
       <a class="site-logo" href="index.html">
@@ -114,7 +114,6 @@
       </div>
     </section>
 
-    <!-- Thanh đăng ký nhận tin (giữa sản phẩm và footer) -->
     <section class="newsletter-strip">
       <div class="inner" style="max-width:1200px; width:100%; margin:0 auto; display:flex; gap:12px; align-items:center">
         <div style="font-weight:600;">Đăng kí nhận tin</div>
@@ -127,7 +126,6 @@
   </main>
 
   <footer>
-    <!-- reuse footer markup from index.html for consistency -->
     <div class="footer-top">
       <div class="footer-grid">
         <div class="footer-col">
@@ -155,7 +153,6 @@
   </footer>
 
   <script>
-    // nâng cấp script: highlight thumb, số lượng, chọn size
     document.addEventListener('DOMContentLoaded', ()=>{
       const thumbs = Array.from(document.querySelectorAll('.thumbs img'));
       const main = document.getElementById('product-main');
@@ -164,7 +161,6 @@
       const minus = document.querySelectorAll('.qty button')[0];
       const plus = document.querySelectorAll('.qty button')[1];
 
-      // set active for first thumb
       if(thumbs.length) thumbs[0].classList.add('active');
 
       thumbs.forEach(t => t.addEventListener('click', e => {
@@ -174,13 +170,11 @@
         e.target.classList.add('active');
       }));
 
-      // size selection (toggle active)
       sizeBtns.forEach(b => b.addEventListener('click', ()=>{
         sizeBtns.forEach(x=>x.classList.remove('active'));
         b.classList.add('active');
       }));
 
-      // qty controls
       minus.addEventListener('click', ()=>{
         let v = parseInt(qtyInput.value||1,10); if(isNaN(v)) v=1; if(v>1) qtyInput.value = v-1;
       });

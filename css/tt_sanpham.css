@@ -1,18 +1,9 @@
-/* product.css
-   Styles cho trang chi tiết sản phẩm (giải thích tiếng Việt)
-
-   Bố cục chính:
-   - Dùng lưới 2 cột: cột ảnh (trái) và cột thông tin (phải)
-   - Ảnh lớn + thumbnails dọc ở bên trái
-   - Phần mô tả và mục liên quan ở dưới
-*/
 
 .product-page{ max-width:1200px; margin: 28px auto; padding: 0 20px; }
 .product-breadcrumb{ background:#fafafa; padding:12px 16px; margin-bottom:18px; font-size:14px; color:#666 }
 
 .product-grid{ display: grid; grid-template-columns: 100px 1fr 420px; gap: 24px; align-items:start; }
 
-/* Gallery: thumbnails dọc bên trái, ảnh lớn ở giữa */
 .gallery{ display:flex; gap:16px; align-items:flex-start }
 .thumbs{ width:100%; display:flex; flex-direction:column; gap:18px; align-items:center }
 .thumbs img{ width:72px; height:92px; object-fit:cover; cursor:pointer; border:2px solid transparent; box-sizing:border-box }
@@ -42,7 +33,6 @@
 .product-tabs ul li{ margin: 8px 0; font-size: 15px }
 .product-tabs .size-guide{ margin-top:18px; font-weight:700; text-transform:uppercase }
 
-/* Make description look like screenshot: slightly larger heading and spaced lists */
 .product-tabs h3{ font-size:18px; font-weight:700 }
 
 /* Breadcrumb bar shown under main nav (nền xám, padding, đầy đủ chiều ngang) */

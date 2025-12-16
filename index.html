@@ -3,27 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>360 Boutique - Trang chủ</title>
-  <link rel="stylesheet" href="styles.css" />
-  <!-- component styles split into separate files for clarity -->
-  <link rel="stylesheet" href="header.css" />
-  <link rel="stylesheet" href="hero.css" />
-  <link rel="stylesheet" href="footer.css" />
+  <title>Nhom 3 - Trang chủ</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/hero.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
 </head>
 <body>
   <div class="topbar">
-    <div class="inner">Hotline Mua Hàng: 0973 285 886 | Hotline CSKH: 1900 886 803 - Ext 1 | Email CSKH: 360boutique.vn@gmail.com</div>
+    <div class="inner">Hotline Mua Hàng: 0973 285 886 | Hotline CSKH: 1900 886 803 - Ext 1 | Email CSKH: nhom3@vinhuni.edu.vn</div>
   </div>
   <header class="site-header">
-    <div class="header-inner">
+    <div class="header-inner"> 
       <a class="site-logo" href="index.html">
-        <img src="images/logo.png" alt="360 Boutique" />
+        <img src="images/logo.png" alt="Nhom 3 Store" />
       </a>
 
       <div class="search-wrap">
         <input class="search-input" type="search" placeholder="Tìm kiếm sản phẩm ..." aria-label="Tìm kiếm" />
         <button class="search-btn" aria-label="Tìm kiếm">
-          <!-- simple magnifier icon -->
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M21 21l-4.35-4.35" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="11" cy="11" r="6" stroke="#666" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
       </div>
@@ -53,166 +52,218 @@
     </nav>
   </header>
 
+  <main>
   <section class="hero">
     <div class="hero-slides">
       <div class="slides-track">
-        <div class="slide" style="background-image:url('images/slide_1.jpg')" aria-hidden="false"></div>
-        <div class="slide" style="background-image:url('images/slide_2.jpg')" aria-hidden="true"></div>
-        <div class="slide" style="background-image:url('images/slide_3.jpg')" aria-hidden="true"></div>
+        <div class="slide" style="background-image:url('images/slide_1.jpg')" aria-hidden="false">
+          <div class="hero-overlay">
+            <div class="hero-content">
+              <span class="hero-badge">Designed by 360°</span>
+              <h1 class="hero-title">SPRING<span class="vibes">Vibes</span></h1>
+              <p class="hero-subtitle">The Spring Vibes Collection has everything you need when it comes to good vibes and fashion</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide" style="background-image:url('images/slide_2.jpg')" aria-hidden="true">
+          <div class="hero-overlay">
+            <div class="hero-content">
+              <span class="hero-badge">Designed by 360°</span>
+              <h1 class="hero-title">SPRING<span class="vibes">Vibes</span></h1>
+              <p class="hero-subtitle">The Spring Vibes Collection has everything you need when it comes to good vibes and fashion</p>
+            </div>
+          </div>
+        </div>
+        <div class="slide" style="background-image:url('images/slide_3.jpg')" aria-hidden="true">
+          <div class="hero-overlay">
+            <div class="hero-content">
+              <span class="hero-badge">Designed by 360°</span>
+              <h1 class="hero-title">SPRING<span class="vibes">Vibes</span></h1>
+              <p class="hero-subtitle">The Spring Vibes Collection has everything you need when it comes to good vibes and fashion</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="hero-dots"></div>
   </section>
-    <section class="products">
-      <h2 class="section-title">SẢN PHẨM BÁN CHẠY</h2>
-      <div class="product-grid">
-        <!-- 12 sample items -->
-        <article class="product-card">
-          <a class="product-link" href="tt_sanpham.html">
+
+  <section class="products-section">
+    <div class="products-container">
+      <aside class="sidebar">
+        <div class="filter-group">
+          <h3 class="filter-title">☰ Tất Cả Danh Mục</h3>
+          <ul class="filter-list">
+            <li><a href="#">Áo nam cao cấp</a></li>
+            <li><a href="#">Áo nam cao cấp</a></li>
+            <li><a href="#">Áo nam cao cấp</a></li>
+            <li><a href="#">Thêm</a></li>
+          </ul>
+        </div>
+
+        <div class="filter-group">
+          <h3 class="filter-title">🔍 Bộ lọc tìm kiếm</h3>
+          <div class="filter-item">Nơi bán</div>
+        </div>
+
+        <div class="filter-group">
+          <h3 class="filter-title">☐ Hà Nội</h3>
+          <div class="filter-item">☐ Hà Nội</div>
+          <div class="filter-item">☐ Hà Nội</div>
+          <div class="filter-item">☐ Hà Nội</div>
+          <div class="filter-item">☐ Hà Nội</div>
+        </div>
+
+        <div class="filter-group">
+          <h3 class="filter-title">▼ Đơn Vị Vận Chuyển</h3>
+          <div class="filter-item">☐ Nhanh</div>
+          <div class="filter-item">☐ Chậm</div>
+        </div>
+
+        <div class="filter-group">
+          <h3 class="filter-title">Thương hiệu</h3>
+          <div class="filter-item">☐ Adidas</div>
+          <div class="filter-item">☐ Omen</div>
+          <div class="filter-item">☐ Aihihi</div>
+          <div class="filter-item">☐ OK</div>
+          <div class="filter-item" style="cursor:pointer">Thêm <span>▼</span></div>
+        </div>
+      </aside>
+
+      <div class="products-main">
+        <h2 class="section-title">SẢN PHẨM BÁN CHẠY</h2>
+        <div class="product-grid">
+          <a href="tt_sanpham.html" class="product-card">
             <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
             <h3>Áo polo nam POHTK401</h3>
             <div class="price">479.000</div>
           </a>
-        </article>
 
-        <article class="product-card">
-          <a class="product-link" href="tt_sanpham.html">
+          <a href="tt_sanpham.html" class="product-card">
             <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
             <h3>Áo polo nam POHTK401</h3>
             <div class="price">479.000</div>
           </a>
-        </article>
 
-        <article class="product-card">
-          <a class="product-link" href="tt_sanpham.html">
+          <a href="tt_sanpham.html" class="product-card">
             <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
             <h3>Áo polo nam POHTK401</h3>
             <div class="price">479.000</div>
           </a>
-        </article>
 
-        <article class="product-card">
-          <a class="product-link" href="tt_sanpham.html">
+          <a href="tt_sanpham.html" class="product-card">
             <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
             <h3>Áo polo nam POHTK401</h3>
             <div class="price">479.000</div>
           </a>
-        </article>
 
-        <article class="product-card">
-          <a class="product-link" href="tt_sanpham.html">
+          <a href="tt_sanpham.html" class="product-card">
             <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
             <h3>Áo polo nam POHTK401</h3>
             <div class="price">479.000</div>
           </a>
-        </article>
 
-        <article class="product-card">
-          <a class="product-link" href="tt_sanpham.html">
+          <a href="tt_sanpham.html" class="product-card">
             <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
             <h3>Áo polo nam POHTK401</h3>
             <div class="price">479.000</div>
           </a>
-        </article>
 
-        <article class="product-card">
-          <a class="product-link" href="tt_sanpham.html">
+          <a href="tt_sanpham.html" class="product-card">
             <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
             <h3>Áo polo nam POHTK401</h3>
             <div class="price">479.000</div>
           </a>
-        </article>
 
-        <article class="product-card">
-          <a class="product-link" href="tt_sanpham.html">
+          <a href="tt_sanpham.html" class="product-card">
             <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
             <h3>Áo polo nam POHTK401</h3>
             <div class="price">479.000</div>
           </a>
-        </article>
 
-        <article class="product-card">
-          <a class="product-link" href="tt_sanpham.html">
+          <a href="tt_sanpham.html" class="product-card">
             <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
             <h3>Áo polo nam POHTK401</h3>
             <div class="price">479.000</div>
           </a>
-        </article>
 
-        <article class="product-card">
-          <a class="product-link" href="tt_sanpham.html">
+          <a href="tt_sanpham.html" class="product-card">
             <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
             <h3>Áo polo nam POHTK401</h3>
             <div class="price">479.000</div>
           </a>
-        </article>
 
-        <article class="product-card">
-          <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
-          <h3>Áo polo nam POHTK401</h3>
-          <div class="price">479.000</div>
-        </article>
+          <a href="tt_sanpham.html" class="product-card">
+            <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
+            <h3>Áo polo nam POHTK401</h3>
+            <div class="price">479.000</div>
+          </a>
 
-        <article class="product-card">
-          <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
-          <h3>Áo polo nam POHTK401</h3>
-          <div class="price">479.000</div>
-        </article>
-
+          <a href="tt_sanpham.html" class="product-card">
+            <img src="images/anh_ao.png" alt="Áo polo nam POHTK401"/>
+            <h3>Áo polo nam POHTK401</h3>
+            <div class="price">479.000</div>
+          </a>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <section class="new-arrivals">
       <h2 class="section-title">HÀNG MỚI VỀ</h2>
-      <div class="arrival-grid">
-        <article class="arrival-card">
-          <img src="images/anh_ao.png" alt="Quần POHTK401" />
-          <h4>Quần polo nam POHTK401</h4>
-          <div class="price">479.000</div>
-        </article>
-        <article class="arrival-card">
-          <img src="images/anh_ao.png" alt="Quần POHTK402" />
-          <h4>Quần polo nam POHTK402</h4>
-          <div class="price">479.000</div>
-        </article>
-        <article class="arrival-card">
-          <img src="images/anh_ao.png" alt="Quần POHTK403" />
-          <h4>Quần polo nam POHTK403</h4>
-          <div class="price">479.000</div>
-        </article>
-        <article class="arrival-card">
-          <img src="images/anh_ao.png" alt="Quần POHTK404" />
-          <h4>Quần polo nam POHTK401</h4>
-          <div class="price">479.000</div>
-        </article>
+      <div class="products-container">
+        <div class="arrival-grid">
+          <a href="tt_sanpham.html" class="arrival-card">
+            <img src="images/anh_ao.png" alt="Quần POHTK401" />
+            <h4>Quần polo nam POHTK401</h4>
+            <div class="price">479.000</div>
+          </a>
+          <a href="tt_sanpham.html" class="arrival-card">
+            <img src="images/anh_ao.png" alt="Quần POHTK402" />
+            <h4>Quần polo nam POHTK402</h4>
+            <div class="price">479.000</div>
+          </a>
+          <a href="tt_sanpham.html" class="arrival-card">
+            <img src="images/anh_ao.png" alt="Quần POHTK403" />
+            <h4>Quần polo nam POHTK403</h4>
+            <div class="price">479.000</div>
+          </a>
+          <a href="tt_sanpham.html" class="arrival-card">
+            <img src="images/anh_ao.png" alt="Quần POHTK404" />
+            <h4>Quần polo nam POHTK401</h4>
+            <div class="price">479.000</div>
+          </a>
+        </div>
       </div>
     </section>
 
     <section class="news">
       <h2 class="section-title">TIN TỨC</h2>
-      <div class="news-grid">
-        <article class="news-card">
-          <img src="images/anh_ao.png" alt="Tin tức 1" />
-          <time>23/09/2025</time>
-          <h4>THỬ THÁCH MÙA \"YÊU\" – 100% NHẬN QUÀ</h4>
-          <p>Vài dòng tóm tắt ngắn về bài viết để người dùng click vào đọc tiếp...</p>
-        </article>
-        <article class="news-card">
-          <img src="images/anh_ao.png" alt="Tin tức 2" />
-          <time>23/09/2025</time>
-          <h4>ĐÓN XUÂN SANG – LÊN ĐỒ TẾT | UP TO 50%</h4>
-          <p>Thông báo chương trình khuyến mại và hình ảnh cửa hàng...</p>
-        </article>
-        <article class="news-card">
-          <img src="images/anh_ao.png" alt="Tin tức 3" />
-          <time>23/09/2025</time>
-          <h4>KHÔNG KHÍ LẠNH BAO TRÙM, MIỀN BẮC RÉT ĐẬM RÉT HẠI</h4>
-          <p>Tin tức thời tiết, gợi ý mặc đẹp mùa đông...</p>
-        </article>
+      <div class="products-container">
+        <div class="news-grid">
+          <article class="news-card">
+            <img src="images/anh_ao.png" alt="Tin tức 1" />
+            <time>23/09/2025</time>
+            <h4>THỬ THÁCH MÙA \"YÊU\" – 100% NHẬN QUÀ</h4>
+            <p>Vài dòng tóm tắt ngắn về bài viết để người dùng click vào đọc tiếp...</p>
+          </article>
+          <article class="news-card">
+            <img src="images/anh_ao.png" alt="Tin tức 2" />
+            <time>23/09/2025</time>
+            <h4>ĐÓN XUÂN SANG – LÊN ĐỒ TẾT | UP TO 50%</h4>
+            <p>Thông báo chương trình khuyến mại và hình ảnh cửa hàng...</p>
+          </article>
+          <article class="news-card">
+            <img src="images/anh_ao.png" alt="Tin tức 3" />
+            <time>23/09/2025</time>
+            <h4>KHÔNG KHÍ LẠNH BAO TRÙM, MIỀN BẮC RÉT ĐẬM RÉT HẠI</h4>
+            <p>Tin tức thời tiết, gợi ý mặc đẹp mùa đông...</p>
+          </article>
+        </div>
       </div>
     </section>
 
-  </main>
+    </main>
 
   <footer>
     <div class="footer-top">
@@ -250,12 +301,12 @@
 
         <div class="footer-col address">
           <h4 class="title">ĐỊA CHỈ</h4>
-          <p><strong>CÔNG TY CỔ PHẦN THỜI TRANG 360</strong></p>
+          <p><strong>CÔNG TY CỔ PHẦN THỜI TRANG Teams3</strong></p>
           <p>VPGD: Đội 6, Xã Phương Đình, Huyện Đan Phượng, Thành phố Vinh, Việt nam</p>
-          <p>Facebook thời trang nam: 360Boutique</p>
+          <p>Facebook thời trang nam: Nhóm 3</p>
           <p>Hotline: 0973285886 – 0862052988</p>
-          <p>Email: 360boutique.vn@gmail.com</p>
-          <p>Website: https://360boutique.vn/</p>
+          <p>Email: nhom3@vinhuni.edu.vn</p>
+          <p>Website: https://nhom3.vinhuni.edu.vn/</p>
           <p>GPKD: 0107756568</p>
         </div>
 
@@ -274,7 +325,6 @@
     </div>
   </footer>
 
-  <!-- Simple slider script: auto-advance + dots + pause on hover -->
   <script>
     (function(){
       const track = document.querySelector('.slides-track');
@@ -283,7 +333,6 @@
       let current = 0;
       let timer = null;
 
-      // create dot buttons
       slides.forEach((s, i) => {
         const btn = document.createElement('button');
         btn.className = 'dot' + (i===0? ' active':'');
@@ -314,12 +363,10 @@
         timer = setInterval(next, 4000);
       }
 
-      // pause on hover
       const heroSlidesEl = document.querySelector('.hero-slides');
       heroSlidesEl.addEventListener('mouseenter', ()=> { if(timer) clearInterval(timer); });
       heroSlidesEl.addEventListener('mouseleave', restartTimer);
 
-      // initialize
       update(0);
       restartTimer();
     })();

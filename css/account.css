@@ -1,0 +1,57 @@
+.container {
+   max-width: 1200px;
+   margin: 28px auto;
+   padding: 0 20px;
+}
+
+.breadcrumb {
+   font-size: 14px;
+   color: #666;
+   margin-bottom: 18px;
+}
+
+.account-grid {
+   display: flex;
+   gap: 40px;
+   align-items: flex-start;
+}
+
+.box {
+   border: 1px solid #ddd;
+   padding: 18px;
+   background: #fff;
+}
+
+.box.form-box { flex: 1; }
+.box.form-box.left { max-width: 54%; }
+.box.form-box.right { max-width: 40%; }
+
+.box h3 { margin: 0 0 12px; font-size: 18px; }
+
+label { display: block; margin: 8px 0 6px; font-size: 14px; }
+input[type="text"], input[type="email"], input[type="password"] {
+   width: 100%;
+   padding: 10px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+   background: #fafafa;
+}
+
+.form-actions { margin-top: 12px; display: flex; align-items: center; gap: 12px; }
+.btn {
+   display: inline-block;
+   padding: 10px 16px;
+   background: #111;
+   color: #fff;
+   border: none;
+   border-radius: 3px;
+   cursor: pointer;
+}
+.btn.ghost { background: transparent; color: #111; border: 1px solid #bbb; }
+.small { font-size: 13px; color: #666; }
+.remember { display: inline-flex; align-items: center; gap: 6px; }
+
+@media (max-width: 880px) {
+   .account-grid { flex-direction: column; }
+   .box.form-box.left, .box.form-box.right { max-width: 100%; }
+}
