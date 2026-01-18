@@ -19,6 +19,7 @@
     if(idx >= 0){ items[idx].qty = (parseInt(items[idx].qty||0,10) || 0) + (parseInt(item.qty||1,10) || 1); }
     else{ items.push({ id: String(item.id), title: item.title||'', price: item.price||0, original: item.original||0, img: item.img||'', qty: parseInt(item.qty||1,10) || 1 }); }
     writeItems(items);
+    notifyAdded(item.title || 'Sản phẩm');
     return true;
   }
 
@@ -86,8 +87,24 @@
 
   function hashCode(str){ var h=0; for(var i=0;i<str.length;i++){ h = ((h<<5)-h)+str.charCodeAt(i); h|=0; } return h; }
 
+  function notifyAdded(title){
+    try{
+      const text = `Đã thêm "${title}" vào giỏ hàng`;
+      let toast = document.querySelector('.toast');
+      if(!toast){
+        toast = document.createElement('div');
+        toast.className = 'toast';
+        document.body.appendChild(toast);
+      }
+      toast.textContent = text;
+      toast.classList.add('show');
+      clearTimeout(notifyAdded._t);
+      notifyAdded._t = setTimeout(()=> toast.classList.remove('show'), 2000);
+    }catch(e){ console.error(e); }
+  }
+
   // expose public API
-  window.cart = { addItem, updateQty, removeItem, readItems, clear, total, renderCart, addCurrentProduct };
+  window.cart = { addItem, updateQty, removeItem, readItems, clear, total, renderCart, addCurrentProduct, notifyAdded };
 
   document.addEventListener('DOMContentLoaded', ()=>{
     try{ updateBadge();

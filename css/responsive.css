@@ -18,8 +18,16 @@ a { text-decoration: none; }
 
 .section-title { text-align: center; margin: 12px 0; }
 
+.products-container { display: grid; grid-template-columns: 200px 1fr; gap: 24px; max-width: 1200px; margin: 0 auto; padding: 0 16px; }
+.sidebar { display: flex; flex-direction: column; gap: 16px; }
+.product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.arrival-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+.news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+
 @media (max-width: 1200px) {
   .products-container { gap: 20px; }
+  .product-grid { grid-template-columns: repeat(3, 1fr); }
+  .arrival-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 1024px) {
@@ -56,3 +64,4 @@ a { text-decoration: none; }
   .product-card h3, .arrival-card h4 { font-size: 12px; }
   .section-title { font-size: 14px; }
 }
+
